@@ -1,5 +1,7 @@
-<h1><strong>Tu trago</strong></h1>
+<h1><strong>Tu Cocktail</strong></h1>
 <h3 align="center"><%= @cocktail.name %></h3><ul>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
 <% @cocktail.doses.each do |dose| %>
 <p><%= dose.description %></p>
 <%= dose.ingredient.name %>
